@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 Happy Girlfriend Day "Pooh"</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffe6f0, #fff);
+      font-family: 'Dancing Script', cursive;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 40px;
+      color: #cc3366;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 24px;
+      color: #444;
+      line-height: 1.5;
+      margin: 15px 0;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      font-size: 20px;
+      background-color: #ff66a3;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #e60073;
+    }
+    .heart {
+      position: fixed;
+      color: #ff66a3;
+      font-size: 20px;
+      animation: float 10s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+<script>
+  for (let i = 0; i < 20; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDelay = Math.random() * 10 + 's';
+    heart.innerHTML = '💖';
+    document.body.appendChild(heart);
+  }
+</script>
+<audio id="bg-music" src="music.mp3" loop></audio>
+<script>
+  document.addEventListener("click", () => {
+    const audio = document.getElementById("bg-music");
+    if (audio.paused) audio.play();
+  }, { once: true });
+</script>
+<div class="container">
+  <h1>🌸 Happy GirlFriend Day: Pooh</h1>
+  <img src="images/photo1.jpg" alt="Memory">
+  <p>It's been nearly eight beautiful months with you,</p><p>Filled with love, laughter, fights, and memories I’ll cherish forever.</p><p>Every moment with you feels like magic,</p><p>And with each passing day, I only fall deeper.</p>
+  <a href="page2.html"><button>Next →</button></a>
+</div>
+</body>
+</html>
